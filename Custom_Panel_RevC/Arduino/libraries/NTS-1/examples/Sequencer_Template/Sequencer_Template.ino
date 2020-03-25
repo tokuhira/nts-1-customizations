@@ -220,7 +220,7 @@ void handle_vr_1(int16_t value) {
   }
   else {
     // Change SHAPE by default
-    if(last_tempo_vr_val == 0xFFFFFFFF
+    if(last_shape_vr_val == 0xFFFFFFFF
        || (abs(value - last_shape_vr_val) < 10)) {
       // Set SHAPE parameter on NTS-1 main board
       nts1.paramChange(k_param_id_osc_shape, k_invalid_param_subid, value);
